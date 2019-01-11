@@ -3,30 +3,30 @@
 The course contest involves a multi-player capture-the-flag variant of Pacman, where agents control both Pacman and ghosts in coordinated team-based strategies. Your team will try to eat the food on the far side of the map, while defending the food on your home side.
 
 ## Key Files to Read:
-### capture.py	
+##### capture.py	
 The main file that runs games locally. This file also describes the new capture the flag GameState type and rules.
-### captureAgents.py	
+##### captureAgents.py	
 Specification and helper methods for capture agents.
-### baselineTeam.py	
+##### baselineTeam.py	
 Example code that defines two very basic reflex agents, to help you get started.
-### myTeam.py	
+##### myTeam.py	
 This is where you define your own agents for inclusion in the competition. (This is the only file that you submit.)
 ## Supporting Files (Do not Modify):
-### game.py	
+##### game.py	
 The logic behind how the Pacman world works. This file describes several supporting types like AgentState, Agent, Direction, and Grid.
-### util.py	
+##### util.py	
 Useful data structures for implementing search algorithms.
-### distanceCalculator.py	
+##### distanceCalculator.py	
 Computes shortest paths between all maze positions.
-### graphicsDisplay.py	
+##### graphicsDisplay.py	
 Graphics for Pacman
-### graphicsUtils.py	
+##### graphicsUtils.py	
 Support for Pacman graphics
-### textDisplay.py	
+##### textDisplay.py	
 ASCII graphics for Pacman
-### keyboardAgents.py	
+##### keyboardAgents.py	
 Keyboard interfaces to control Pacman
-### layout.py	
+##### layout.py	
 Code for reading layout files and storing their contents
 
 ## Rules of Pacman Capture the Flag
@@ -76,31 +76,31 @@ To facilitate agent development, we provide code in distanceCalculator.py to sup
 To get started designing your own agent, we recommend subclassing the CaptureAgent class. This provides access to several convenience methods. Some useful methods are:
 
 
-def getFood(self, gameState):
+##### def getFood(self, gameState):
 Returns the food you're meant to eat. This is in the form of a matrix where m[x][y]=True if there is food you can eat (based on your team) in that square.
 
-def getFoodYouAreDefending(self, gameState):
+##### def getFoodYouAreDefending(self, gameState):
 Returns the food you're meant to protect (i.e., that your opponent is supposed to eat). This is in the form of a matrix where m[x][y]=True if there is food at (x,y) that your opponent can eat.
 
-def getOpponents(self, gameState):
+##### def getOpponents(self, gameState):
 Returns agent indices of your opponents. This is the list of the numbers of the agents (e.g., red might be [1,3]).
 
-def getTeam(self, gameState):
+##### def getTeam(self, gameState):
 Returns agent indices of your team. This is the list of the numbers of the agents (e.g., blue might be [1,3]).
 
-def getScore(self, gameState):
+##### def getScore(self, gameState):
 Returns how much you are beating the other team by in the form of a number that is the difference between your score and the opponents score. This number is negative if you're losing.
 
-def getMazeDistance(self, pos1, pos2):
+##### def getMazeDistance(self, pos1, pos2):
 Returns the distance between two points; These are calculated using the provided distancer object. If distancer.getMazeDistances() has been called, then maze distances are available. Otherwise, this just returns Manhattan distance.
 
-def getPreviousObservation(self):
+##### def getPreviousObservation(self):
 Returns the GameState object corresponding to the last state this agent saw (the observed state of the game last time this agent moved - this may not include all of your opponent's agent locations exactly).
 
-def getCurrentObservation(self):
+##### def getCurrentObservation(self):
 Returns the GameState object corresponding this agent's current observation (the observed state of the game - this may not include all of your opponent's agent locations exactly).
 
-def debugDraw(self, cells, color, clear=False):
+##### def debugDraw(self, cells, color, clear=False):
 Draws a colored box on each of the cells you specify. If clear is True, will clear all old drawings before drawing on the specified cells. This is useful for debugging the locations that your code works with. color: list of RGB values between 0 and 1 (i.e. [1,0,0] for red) cells: list of game positions to draw on (i.e. [(20,5), (3,22)])
 
 ### Restrictions
