@@ -139,6 +139,3 @@ You can record local games using the --record option, which will write the game 
 ### Acknowledgements
 Thanks to Barak Michener and Ed Karuna for providing improved graphics and debugging help.
 
-
-
-Have fun! Please bring our attention to any problems you discover.
