@@ -1,4 +1,7 @@
 # PacMan-AI-Planning
+
+More details can be found in [Wiki](https://github.com/PrincekinNicholas/PacMan-AI-Planning/wiki)
+
 ## Introduction
 The course contest involves a multi-player capture-the-flag variant of Pacman, where agents control both Pacman and ghosts in coordinated team-based strategies. Your team will try to eat the food on the far side of the map, while defending the food on your home side.
 
